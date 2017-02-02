@@ -21,13 +21,13 @@ function cpp() {
 cd $LOCAL_DIR
 
 DEB_DIR=$LOCAL_DIR/deb
-DEB_SOURCE_DIR=$LOCAL_DIR/5-1-1/source_deb
+DEB_SOURCE_DEB_FILE=$LOCAL_DIR/5-1-1/source_deb/elasticsearch-5.1.1.deb
 
 mkdir -p $DEB_DIR
 
 # extract all the directories that needs to be installed
-echo "$DEB_SOURCE_DIR   -- DEB_SOURCE_DIR"
-dpkg -x $DEB_SOURCE_DIR/elasticsearch*.deb $DEB_DIR
+echo "$DEB_SOURCE_DEB_FILE  -- DEB_SOURCE_DEB_FILE"
+dpkg -x $DEB_SOURCE_DEB_FILE $DEB_DIR
 
 #copy static files in source code
 cp 5-1-1/static/* $DEB_DIR/etc/elasticsearch/
