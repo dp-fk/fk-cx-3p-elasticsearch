@@ -21,7 +21,7 @@ function cpp() {
 cd $LOCAL_DIR
 
 DEB_DIR=$LOCAL_DIR/deb
-DEB_SOURCE_DIR=5-1-1/source_deb
+DEB_SOURCE_DIR=$LOCAL_DIR/5-1-1/source_deb
 
 mkdir -p $DEB_DIR
 
