@@ -1,0 +1,52 @@
+[
+  {
+    "repoName": "fk-config-service-confd",
+    "repoVersion": 1,
+    "repoReferenceType": "HEAD"
+  },
+  {
+    "repoName": "cosmos-v3",
+    "repoVersion": 1,
+    "repoReferenceType": "HEAD"
+  },
+  {
+    "repoName": "logsvc",
+    "repoVersion": 17,
+    "repoReferenceType": "HEAD"
+  },
+  {
+    "repoName": "hosts-populator",
+    "repoVersion": 1,
+    "repoReferenceType": "HEAD"
+  },
+  {
+    "repoName": "fk-ops-servicebuilder",
+    "repoVersion": 1,
+    "repoReferenceType": "HEAD"
+  },
+  {
+    "repoName": "fk-nagios-plugins",
+    "repoVersion": 1,
+    "repoReferenceType": "HEAD"
+  },
+  {
+    "repoName": "alertz-nagios-common",
+    "repoVersion": 1,
+    "repoReferenceType": "HEAD"
+  },
+  {
+    "repoName": "alertz-nsca-wrapper",
+    "repoVersion": 1,
+    "repoReferenceType": "HEAD"
+  },
+  {
+    "repoName": "oracle-java",
+    "repoVersion": 7,
+    "repoReferenceType": "EXACT"
+  },
+  {
+    "repoName": "fk-cx-3p-elasticsearch-test",
+    "repoVersion": 1,
+    "repoReferenceType": "HEAD"
+  }
+]
