@@ -37,7 +37,7 @@ cp 5-1-1/static/* $DEB_DIR/etc/elasticsearch/
 
 # extract the DEBIAN directory that contains control file and other scripts
 mkdir -p $DEB_DIR/DEBIAN
-dpkg -e elasticsearch*.deb $DEB_DIR/DEBIAN
+dpkg -e $DEB_SOURCE_DEB_FILE $DEB_DIR/DEBIAN
 
 # prepend custom commands in postinst
 cat $DEB_DIR/DEBIAN/postinst >> $LOCAL_DIR/5-1-1/deb_dir/DEBIAN/postinst
