@@ -43,10 +43,5 @@
     "repoName": "oracle-java",
     "repoVersion": 7,
     "repoReferenceType": "EXACT"
-  },
-  {
-    "repoName": "fk-cx-3p-elasticsearch-test",
-    "repoVersion": 1,
-    "repoReferenceType": "HEAD"
   }
 ]
