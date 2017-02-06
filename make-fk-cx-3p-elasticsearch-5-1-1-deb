@@ -52,7 +52,6 @@ cp 5-1-1/config/*.tmpl $DEB_DIR/etc/confd/templates
 #chown -R root:root $DEB_DIR/etc/confd/conf.d
 #chown -R root:root $DEB_DIR/etc/confd/templates
 
-
 # extract version
 ES_VERSION=$(cat $DEB_DIR/DEBIAN/control | grep Version | sed -e 's/Version: *\(.*\)$/\1/g')
 sed -i -e's/Package: .*$/Package: _PACKAGE_/' $DEB_DIR/DEBIAN/control
@@ -60,7 +59,7 @@ sed -i -e's/Version: .*$/Version: 1._VERSION_/' $DEB_DIR/DEBIAN/control
 sed -i -e's/Section: .*$/Section: flipkart\/3p/' $DEB_DIR/DEBIAN/control
 sed -i -e's/Priority: .*$/Priority: standard/' $DEB_DIR/DEBIAN/control
 sed -i -e's/Maintainer: .*$/Maintainer: elasticsearch-sme@flipkart.com/' $DEB_DIR/DEBIAN/control
-sed -i -e's/\(Depends: .*$\)/\1, curl, fk-config-service-confd, oracle-j2sdk1.8/' $DEB_DIR/DEBIAN/control
+sed -i -e's/\(Depends: .*$\)/\1, curl, fk-etc-hosts-confd-utility, fk-config-service-confd, oracle-j2sdk1.8/' $DEB_DIR/DEBIAN/control
 sed -i -e"s/\(Description: *\)\(.*\)/\1(Providing $ES_VERSION) \2/" $DEB_DIR/DEBIAN/control
 echo "Conflicts: elasticsearch-server" >>$DEB_DIR/DEBIAN/control
 echo "Provides: elasticsearch-server" >>$DEB_DIR/DEBIAN/control

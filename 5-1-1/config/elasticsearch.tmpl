@@ -1,10 +1,24 @@
 ---
 cluster.name: {{getv "/cluster.name"}}
+
+{{ if exists "/script.indexed" }}
 script.indexed: {{getv "/script.indexed"}}
+{{ end }}
+
+{{ if exists "/script.inline" }}
 script.inline: {{getv "/script.inline"}}
+{{ end }}
+
 node.name: __HOSTNAME__
+
+{{ if exists "/index.number_of_shards" }}
 index.number_of_shards: {{getv "/index.number_of_shards"}}
+{{ end }}
+
+{{ if exists "/index.number_of_replicas" }}
 index.number_of_replicas: {{getv "/index.number_of_replicas"}}
+{{ end }}
+
 path.data: {{getv "/path.data"}}
 path.logs: {{getv "/path.logs"}}
 
@@ -28,7 +42,9 @@ node.client: {{ getv "/node.client" }}
 http.enabled: {{ getv "/http.enabled" }}
 {{ end }}
 
+{{ if exists "/bootstrap.mlockall" }}
 bootstrap.mlockall: {{getv "/bootstrap.mlockall"}}
+{{ end }}
 
 {{ if exists "/action.disable_delete_all_indices" }}
 action.disable_delete_all_indices: {{getv "/action.disable_delete_all_indices"}}

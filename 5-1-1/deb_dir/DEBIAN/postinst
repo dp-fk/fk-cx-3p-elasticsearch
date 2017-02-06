@@ -7,6 +7,7 @@ sed -i 's/__HOSTNAME__/'"$(hostname -I)"'/g' /etc/confd/templates/elasticsearch.
 sed -i 's/_ELASTICSEARCH_BUCKET_/'"$ELASTICSEARCH_BUCKET"'/g' /etc/confd/conf.d/*.toml
 
 #restart confd to reflect new conf.d files
+sudo /etc/init.d/fk-config-service-confd init
 sudo /etc/init.d/fk-config-service-confd restart
 
 #set proper permissions

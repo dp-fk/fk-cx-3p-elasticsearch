@@ -43,5 +43,10 @@
     "repoName": "oracle-java",
     "repoVersion": 7,
     "repoReferenceType": "EXACT"
+  },
+  {
+    "repoName": "fk-etc-hosts-confd-utility",
+    "repoVersion": 17,
+    "repoReferenceType": "HEAD"
   }
 ]
