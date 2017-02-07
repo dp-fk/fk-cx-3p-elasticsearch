@@ -11,14 +11,6 @@ script.inline: {{getv "/script.inline"}}
 
 node.name: __HOSTNAME__
 
-{{ if exists "/index.number_of_shards" }}
-index.number_of_shards: {{getv "/index.number_of_shards"}}
-{{ end }}
-
-{{ if exists "/index.number_of_replicas" }}
-index.number_of_replicas: {{getv "/index.number_of_replicas"}}
-{{ end }}
-
 path.data: {{getv "/path.data"}}
 path.logs: {{getv "/path.logs"}}
 
@@ -42,20 +34,12 @@ node.client: {{ getv "/node.client" }}
 http.enabled: {{ getv "/http.enabled" }}
 {{ end }}
 
-{{ if exists "/bootstrap.mlockall" }}
-bootstrap.mlockall: {{getv "/bootstrap.mlockall"}}
+{{ if exists "/bootstrap.memory_lock" }}
+bootstrap.memory_lock: {{getv "/bootstrap.memory_lock"}}
 {{ end }}
 
-{{ if exists "/action.disable_delete_all_indices" }}
-action.disable_delete_all_indices: {{getv "/action.disable_delete_all_indices"}}
-{{ end }}
-
-{{ if exists "/index.refresh_interval" }}
-index.refresh_interval: {{getv "/index.refresh_interval"}}
-{{ end }}
-
-{{ if exists "/index.translog.flush_threshold_size" }}
-index.translog.flush_threshold_size: {{getv "/index.translog.flush_threshold_size"}}
+{{ if exists "/action.destructive_requires_name" }}
+action.destructive_requires_name: {{getv "/action.destructive_requires_name"}}
 {{ end }}
 
 ##########################################
@@ -122,7 +106,6 @@ index.unassigned.node_left.delayed_timeout: {{getv "/index.unassigned.node_left.
 ########################################
 # Discovery related configuration starts
 
-discovery.zen.ping.multicast.enabled: {{getv "/discovery.zen.ping.multicast.enabled"}}
 discovery.zen.ping.unicast.hosts:
   {{range jsonArray (getv "/discovery.zen.ping.unicast.hosts")}}
    - {{.}}
