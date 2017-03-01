@@ -18,6 +18,6 @@ chown -R root:elasticsearch /etc/init.d/elasticsearch
 chown -R elasticsearch:elasticsearch /var/lib/elasticsearch 
 chown -R root:elasticsearch /etc/default/elasticsearch
 chmod 666 /etc/elasticsearch/elasticsearch.yml
-sed -i '/^$/d' /etc/elasticsearch/elasticsearch.yml > /etc/elasticsearch/elasticsearch.yml
+sed -i '/^$/d' /etc/elasticsearch/elasticsearch.yml
 #install the basic plugins useful for all
 
